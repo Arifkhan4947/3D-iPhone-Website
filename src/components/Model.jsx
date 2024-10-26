@@ -7,7 +7,7 @@ import { yellowImg } from '../utils';
 import * as THREE from 'three';  // import THREE 
 import { View } from '@react-three/drei';  // this view is allow for different side view.
 import { Canvas } from '@react-three/fiber'; // there is canvas
-import { models } from '../constants';
+import { models, sizes } from '../constants';
 
 const Model = () => {
 
@@ -91,6 +91,19 @@ const Model = () => {
                                 onClick={() => setModel(item)} />
                             ))}
                         </ul>
+
+                        <button className='size-btn-container'>
+                            {sizes.map(({ label, value }) => (
+                                <span key={label} className='size-btn' 
+                                style={{ backgroundColor: size === 
+                                value ? 'white' : 'transparent', 
+                                color: size === value ? 'black' : 
+                                'white' }} onClick={() => setSize 
+                                (value)}>
+                                    {label}
+                                </span>
+                            ))}
+                        </button>
                     </div>
                 </div>
             </div>
