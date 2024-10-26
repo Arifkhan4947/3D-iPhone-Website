@@ -4,6 +4,8 @@ import React, { useRef, useState } from 'react'
 import ModelView from './ModelView';
 import { yellowImg } from '../utils';
 
+import * as THREE from 'three';  // import THREE 
+
 const Model = () => {
 
     const [size, setSize] = useState('small');
@@ -13,11 +15,17 @@ const Model = () => {
         img: yellowImg,
     })
 
-    // camera control for the model view
+    // ---------------- camera control for the model view -----------------
     const cameraControlSmall = useRef();
     const cameraControlLarge = useRef();
 
+    // ------- model -------
     const small = useRef(new THREE.Group());
+    const large = useRef(new THREE.Group());
+
+    // ------- rotation -------
+    const [smallRotation, setSmallRotation] = useState(0);
+    const [largeRotation, setLargeRotation] = useState(0);
 
     useGSAP(()=> {
         gsap.to('#heading', {
