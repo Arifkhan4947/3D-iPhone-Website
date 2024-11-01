@@ -63,7 +63,7 @@ const HowItWorks = () => {
                 autoPlay
                 ref={videoRef}
               >
-                <source src={frameVideo} type="video/mp4" />
+              <source src={frameVideo} type="video/mp4" />
               </video>
             </div>
           </div>

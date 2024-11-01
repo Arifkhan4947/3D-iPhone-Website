@@ -4,9 +4,9 @@ import React, { useEffect, useRef, useState } from 'react'
 import ModelView from './ModelView';
 import { yellowImg } from '../utils';
 
-import * as THREE from 'three';  // import THREE 
-import { View } from '@react-three/drei';  // this view is allow for different side view.
-import { Canvas } from '@react-three/fiber'; // there is canvas
+import * as THREE from 'three';  
+import { View } from '@react-three/drei';  
+import { Canvas } from '@react-three/fiber'; 
 import { models, sizes } from '../constants';
 import { animateWithGsapTimeline } from '../utils/animations';
 
